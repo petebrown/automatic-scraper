@@ -21,6 +21,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
+      - name: Install necessary python packages
+        run: pip install pandas beautifulsoup4 requests
       # Make sure scraper filename matches the filename in the repo
       - name: Run the scraping script
         run: python scraper.py
